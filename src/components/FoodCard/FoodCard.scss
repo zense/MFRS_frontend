@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.outer-card-temp{
+    height: 900px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card{
+    width: 27vw;
+    height: 160px;
+    border: 1px solid #646E78;
+    border-radius: 25px;
+    display: flex;
+    background-color: whitesmoke;
+    &-image{
+        width: 25%;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 30px 0 0 30px;
+        img{
+            width: 88%;
+            height: 73%;
+            border-radius: 47%;
+            border: 2px solid lavender;
+        }
+    }
+    &-text{
+        width: 75%;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-family:'Poppins','sans-serif';
+        &-name{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            height:50% ;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            h1{
+                width: 50%;
+                font-size: 21px;
+            }
+            h2{
+                width: 50%;
+                font-size: 18px;
+            }
+        }
+        &-rating{
+            width: 95%;
+            height: 50%;
+            border-top:1px solid #fff ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .rating-recent{
+                padding-left: 1vw;
+                width: 55%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                gap: 0.3vw;
+                img{
+                    height: 30px;
+                    aspect-ratio: 1/1;
+                }
+                p{
+                    text-align: left;
+                    font-size: 17px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            .rating-notrecent{
+                width: 45%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 0.3vw;
+                padding-right: 1vw;
+                img{
+                    height: 30px;
+                    aspect-ratio: 1/1;
+                }
+                p{
+                    text-align: left;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:728px) and (max-width:1320px){
+    .card{
+        width: 40vw;
+        h1{
+            font-size: 18px;
+        }
+        h2{
+            font-size: 16px;
+        }
+        &-text{
+            img{
+                height: 27px !important;
+            }
+        }
+        p{
+            font-size: 15px !important;
+        }
+    }
+}
+@media (max-width:728px){
+    .card{
+        width: 90vw;
+        h1{
+            font-size: 17px;
+        }
+        h2{
+            font-size: 15px;
+        }
+        &-text{
+            img{
+                height: 25px !important;
+            }
+        }
+        p{
+            font-size: 15px !important;
+        }
+    }
+}
